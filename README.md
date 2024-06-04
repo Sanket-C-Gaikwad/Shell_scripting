@@ -22,3 +22,43 @@ Shell variables are used to store data and manage environment settings in the Ba
   MY_VAR="Hello, World!"
   echo $MY_VAR
 
+- **Environment Variables**: Environment variables are inherited by all child processes of the shell. They are often used to store system-wide values.
+  ```bash
+  # Export an environment variable
+  export PATH=$PATH:/usr/local/bin
+  # Access the environment variable
+  echo $PATH
+
+  #!/bin/bash
+  MY_VAR="Hello"
+  export MY_VAR
+  ./child_script.sh  # This script will have access to MY_VAR
+
+- **Positional Parameters**: Positional parameters hold the arguments passed to a script or function.
+  ```bash
+  #!bin/bash
+  #accessing the positional parameters
+  echo "First parameter: $1"
+  echo "First parameter: $2"
+  
+
+  ./script.sh par1 par2
+  ```
+
+- **Arrays**: Bash also supports arrays.
+  ```bash
+  # Define an array
+  my_array=(value1 value2 value3)
+  # Access array elements
+  echo ${my_array[0]}
+  echo ${my_array[1]}
+  echo ${my_array[@]}  # All elements
+  ```
+
+- **Unsetting Variables**: Variables can be unset to remove their value.
+  ```bash
+  # Unset a variable
+  unset GREETING
+  echo $GREETING  # No output, as the variable is unset
+  ```
+
