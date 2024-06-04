@@ -63,8 +63,11 @@ Shell variables are used to store data and manage environment settings in the Ba
   ```
 
 # 3. PATH, Aliases, and fork()
-
-
+| Streams/ File Descriptor | Represents      | Numeric Notation | Symbolic Notation | To Overwrite | To Append | Example                   |
+|--------------------------|-----------------|------------------|-------------------|--------------|-----------|---------------------------|
+| file descriptor 0 (or fd[0]) | standard input  | stdin (0)         | 0<                | <            | <<        | Terminal, Keyboard, File  |
+| file descriptor 1 (or fd[1]) | standard output | stdout (1)        | 1>                | >            | >>        | Terminal, File            |
+| file descriptor 2 (or fd[2]) | standard error  | stderr (2)        | 2>                | 2>           | 2>>       | Terminal, File            |
 - **PATH**: 
 The PATH variable in Bash is an environment variable that specifies the directories in which the shell looks for executable files. When you type a command, the shell searches through these directories to find the corresponding executable.  
 
@@ -115,12 +118,7 @@ Execution:
 - Each process executes the subsequent instructions independently.
 
 - **File Descriptors**: 
-| Streams/ File Descriptor | Represents      | Numeric Notation | Symbolic Notation | To Overwrite | To Append | Example                   |
-|--------------------------|-----------------|------------------|-------------------|--------------|-----------|---------------------------|
-| file descriptor 0 (or fd[0]) | standard input  | stdin (0)         | 0<                | <            | <<        | Terminal, Keyboard, File  |
-| file descriptor 1 (or fd[1]) | standard output | stdout (1)        | 1>                | >            | >>        | Terminal, File            |
-| file descriptor 2 (or fd[2]) | standard error  | stderr (2)        | 2>                | 2>           | 2>>       | Terminal, File            |
-
+Table at the top
 
 
 # 4.
