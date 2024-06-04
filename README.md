@@ -104,6 +104,7 @@ source ~/.bashrc
 ```
 
 - **fork()**: 
+
 Process Creation:
 - `fork()` creates a new process by duplicating the existing process.
 - The child process receives a unique process ID (PID).
@@ -119,6 +120,12 @@ Execution:
 
 - **File Descriptors**: 
 Table at the top
+
+| Streams/ File Descriptor | Represents      | Numeric Notation | Symbolic Notation | To Overwrite | To Append | Example                   |
+|--------------------------|-----------------|------------------|-------------------|--------------|-----------|---------------------------|
+| file descriptor 0 (or fd[0]) | standard input  | stdin (0)         | 0<                | <            | <<        | Terminal, Keyboard, File  |
+| file descriptor 1 (or fd[1]) | standard output | stdout (1)        | 1>                | >            | >>        | Terminal, File            |
+| file descriptor 2 (or fd[2]) | standard error  | stderr (2)        | 2>                | 2>           | 2>>       | Terminal, File            |
 
 
 # 4.
