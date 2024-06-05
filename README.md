@@ -195,4 +195,64 @@ grep [OPTIONS] PATTERN [FILE...]
 | `-B NUM`| Print NUM lines of leading context before matches| `grep -B 3 "error" logfile.txt`        |
 | `-C NUM`| Print NUM lines of context around matches       | `grep -C 3 "error" logfile.txt`        |
 
+# 6. awk
+
+- awk is a powerful text-processing language and command-line tool used in Unix/Linux environments. It is designed for pattern scanning and processing, allowing users to perform complex text manipulations and data extraction efficiently.
+
+| Option            | Description                                                                 | Example                                          |
+|-------------------|-----------------------------------------------------------------------------|--------------------------------------------------|
+| `-F`              | Specify a field separator                                                   | `awk -F, '{ print $1 }' file.csv`                |
+| `-v`              | Define a variable before processing                                         | `awk -v var=1 '{ print $1 + var }' file`         |
+| `-f`              | Read the `awk` program from a file                                          | `awk -f script.awk file`                         |
+| `-b`              | Use buffered output                                                         | `awk -b '{ print $1 }' file`                     |
+| `-W`              | Supply options specific to `gawk`                                           | `awk -W version`                                 |
+| `--re-interval`   | Enable interval expressions in regular expressions                          | `awk --re-interval '{ print $1 }' file`          |
+| `BEGIN {}`        | Block of code to execute before processing input                            | `awk 'BEGIN { print "Header" } { print $1 }' file`|
+| `END {}`          | Block of code to execute after processing all input                         | `awk '{ print $1 } END { print "Footer" }' file` |
+| `NR`              | Built-in variable that holds the current record number                      | `awk '{ print NR, $1 }' file`                    |
+| `NF`              | Built-in variable that holds the number of fields in the current record     | `awk '{ print NF, $0 }' file`                    |
+| `$0`              | Represents the entire current record                                        | `awk '{ print $0 }' file`                        |
+| `$1, $2, ...`     | Represents the first, second, ... fields in the current record              | `awk '{ print $1, $2 }' file`                    |
+| `tolower()`       | Function to convert text to lowercase                                       | `awk '{ print tolower($0) }' file`               |
+| `toupper()`       | Function to convert text to uppercase                                       | `awk '{ print toupper($0) }' file`               |
+| `length()`        | Function to get the length of the string                                    | `awk '{ print length($0) }' file`                |
+| `substr()`        | Function to extract a substring                                             | `awk '{ print substr($0, 1, 5) }' file`          |
+| `match()`         | Function to match a regex pattern                                           | `awk '{ if (match($0, /regex/)) print $0 }' file`|
+| `print`           | Print formatted output                                                      | `awk '{ print $1, $2 }' file`                    |
+| `printf`          | Print formatted output with specific format                                 | `awk '{ printf "%-10s %-10s\n", $1, $2 }' file`  |
+
+
+# 7. sed
+
+- sed, short for Stream Editor, is a powerful Unix utility for parsing and transforming text. It reads input line-by-line and applies specified text modifications before outputting the result.
+
+- Key Features
+Text Substitution: Replace specific patterns in text.
+Text Deletion: Remove specific lines or patterns.
+Text Insertion: Add new text lines at specific locations.
+Text Transformation: Modify text based on regex patterns.
+Global sed
+
+| Key Feature          | Description                                      | Example                                             |
+|----------------------|--------------------------------------------------|-----------------------------------------------------|
+| Text Substitution    | Replace specific patterns in text                | `sed 's/foo/bar/' file.txt`                         |
+| Global Substitution  | Replace all occurrences of a specific pattern    | `sed 's/foo/bar/g' file.txt`                        |
+| Text Deletion        | Remove specific lines or patterns                | `sed '/pattern/d' file.txt`                         |
+| Text Insertion       | Add new text lines at specific locations 2i second line         | `sed '2i\This is an inserted line' file.txt`        |
+| Text Transformation  | Modify text based on regex patterns              | `sed 's/\(.*\)/\U\1/' file.txt` (uppercase conversion) |
+
+- Test Transformation
+| Transformation                | Description                                    | Example Command                                    |
+|-------------------------------|------------------------------------------------|----------------------------------------------------|
+| Uppercase Conversion          | Convert text to uppercase                      | `sed 's/.*/\U&/' file.txt`                          |
+| Lowercase Conversion          | Convert text to lowercase                      | `sed 's/.*/\L&/' file.txt`                          |
+| Capitalize First Letter       | Capitalize the first letter of each word       | `sed 's/\b\(.\)/\u\1/g' file.txt`                   |
+| Replace Spaces with Underscore| Replace all spaces with underscores            | `sed 's/ /_/g' file.txt`                            |
+| Remove Leading Whitespace     | Remove leading whitespace from each line       | `sed 's/^[ \t]*//' file.txt`                        |
+| Remove Trailing Whitespace    | Remove trailing whitespace from each line      | `sed 's/[ \t]*$//' file.txt`                        |
+| Add Line Numbers              | Add line numbers to each line                  | `sed = file.txt | sed 'N;s/\n/: /'`                 |
+| Double Space Lines            | Insert a blank line after each line            | `sed G file.txt`                                    |
+| Remove Blank Lines            | Delete all blank lines                         | `sed '/^$/d' file.txt`                              |
+| Surround with Quotes          | Surround each line with double quotes          | `sed 's/.*/"&"/' file.txt`                          |
+
 
