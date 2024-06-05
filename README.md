@@ -115,7 +115,6 @@ Execution:
 - Each process executes the subsequent instructions independently.
 
 - **File Descriptors**: 
-Table at the top
 
 | Streams/ File Descriptor | Represents      | Numeric Notation | Symbolic Notation | To Overwrite | To Append | Example                   |
 |--------------------------|-----------------|------------------|-------------------|--------------|-----------|---------------------------|
@@ -164,3 +163,14 @@ else
 fi
 ```
 
+- **For loops**:
+
+```bash
+readfile 
+4forloop.sh
+
+penetration testing
+5pingsweep.sh
+6nmapscan.sh
+
+```
