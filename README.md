@@ -171,6 +171,5 @@ readfile
 
 penetration testing
 5pingsweep.sh
-6nmapscan.sh
 
 ```
