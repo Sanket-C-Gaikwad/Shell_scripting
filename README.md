@@ -173,3 +173,26 @@ penetration testing
 5pingsweep.sh
 
 ```
+
+
+# 5. Grep
+
+- The grep command in Unix/Linux is used to search for specific patterns within files. Here’s a detailed breakdown of its options and examples.
+ 
+```bash
+grep [OPTIONS] PATTERN [FILE...]
+```
+| Option  | Description                                     | Example                                |
+|---------|-------------------------------------------------|----------------------------------------|
+| `-i`    | Ignore case distinctions                        | `grep -i "error" logfile.txt`          |
+| `-r`    | Recursively search directories                  | `grep -r "error" /var/log/`            |
+| `-v`    | Invert match (select non-matching lines)        | `grep -v "error" logfile.txt`          |
+| `-w`    | Match whole words only                          | `grep -w "error" logfile.txt`          |
+| `-n`    | Show line numbers with output                   | `grep -n "error" logfile.txt`          |
+| `-c`    | Count the number of matching lines              | `grep -c "error" logfile.txt`          |
+| `-l`    | List filenames containing the match             | `grep -l "error" *.log`                |
+| `-A NUM`| Print NUM lines of trailing context after matches| `grep -A 3 "error" logfile.txt`        |
+| `-B NUM`| Print NUM lines of leading context before matches| `grep -B 3 "error" logfile.txt`        |
+| `-C NUM`| Print NUM lines of context around matches       | `grep -C 3 "error" logfile.txt`        |
+
+
