@@ -242,6 +242,7 @@ Global sed
 | Text Transformation  | Modify text based on regex patterns              | `sed 's/\(.*\)/\U\1/' file.txt` (uppercase conversion) |
 
 - Test Transformation
+
 | Transformation                | Description                                    | Example Command                                    |
 |-------------------------------|------------------------------------------------|----------------------------------------------------|
 | Uppercase Conversion          | Convert text to uppercase                      | `sed 's/.*/\U&/' file.txt`                          |
