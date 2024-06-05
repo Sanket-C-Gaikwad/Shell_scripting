@@ -1,0 +1,9 @@
+Hello, please contact us at support@example.com for more information.
+You can also reach out to our sales team at sales@example.com.
+For technical issues, email tech.support@example.com.
+Our HR department can be contacted at hr@example.co.uk.
+Please do not hesitate to send your queries to info@example.org.
+This is a redundant line with no email.
+Another redundant line without an email address.
+Example of a bad email: bademail@com
+Marketing emails should be sent to marketing@example.com.

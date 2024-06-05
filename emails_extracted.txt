@@ -1,0 +1,6 @@
+support@example.com
+sales@example.com
+tech.support@example.com
+hr@example.co.uk
+info@example.org
+marketing@example.com

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#echo "Logs of Date and time" > $2
+#echo "Logs of Date and time" >> $2
 
 log_file=$2
 
