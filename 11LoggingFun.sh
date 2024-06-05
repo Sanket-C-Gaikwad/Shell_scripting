@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Logs of Date and time" > $2
+#echo "Logs of Date and time" > $2
 
 log_file=$2
 
@@ -12,20 +12,19 @@ logging() {
 
 }
 
-
 #error handling
 
-if [ ! -f 2 ]; then
+if [ $# -ne 2 ]; then
 
-	echo "The correct usage: $0 $1 $log_file"
+	echo "The correct usage: $0 File log_file"
 	exit 1
 fi
 
-if [ ! -f $1 ]; the
+if [ ! -f $1 ]; then
 
-	echo ""File $1 does not exit"
+	echo "File $1 does not exit"
 	exit 1
 fi
 
-
-log "The file $1 is processed and logs have been stored in $log_file"
+logging "The file $1 is processed and logs have been stored in $log_file"
+cat $log_file

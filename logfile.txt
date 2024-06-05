@@ -1,0 +1,4 @@
+Logs of Date and time
+2024-06-05 14:50:37 - The file README.md is processed and logs have been stored in logfile.txt
+2024-06-05 14:51:24 - The file list.txt is processed and logs have been stored in logfile.txt
+2024-06-05 14:51:37 - The file 10DirBackup.sh is processed and logs have been stored in logfile.txt
