@@ -257,3 +257,32 @@ Global sed
 | Surround with Quotes          | Surround each line with double quotes          | `sed 's/.*/"&"/' file.txt`                          |
 
 
+
+# 8. Crontab
+
+- The crontab (cron table) is a configuration file that specifies shell commands to run periodically on a Unix-like operating system. Each line in the crontab file represents a job, and the format is:
+
+```bash
+* * * * * command
+```
+Each asterisk represents a unit of time, in the following order:
+
+Minute (0-59)
+Hour (0-23)
+Day of the month (1-31)
+Month (1-12)
+Day of the week (0-7, where both 0 and 7 represent Sunday)
+
+| Time Fields                           | Description                                     |
+|---------------------------------------|-------------------------------------------------|
+| `30 2 * * 0`                          | At 2:30 AM on Sundays.                          |
+| `*/15 8-17 * * 1-5`                   | Every 15 minutes from 8 AM to 5 PM on weekdays (Monday to Friday). |
+| `0 6 1 * *`                           | At 6 AM on the first day of every month.        |
+| `0 0,12 * * *`                        | At midnight and noon every day.                 |
+| `45 16 28-31 * * [ "$(date +\%d -d tomorrow)" == "01" ]` | At 4:45 PM on the last day of the month.        |
+| `30 3 1-7 * 1 [ "$(date +\%u)" -eq 1 ]` | At 3:30 AM on the first Monday of each month.   |
+| `0 * * * *`                           | At the start of every hour.                     |
+| `0 5 * * *`                           | At 5 AM daily.                                  |
+| `0 0 * * *`                           | At midnight daily.                              |
+| `*/5 * * * *`                         | Every 5 minutes.                                |
+
