@@ -284,5 +284,6 @@ Day of the week (0-7, where both 0 and 7 represent Sunday)
 | `0 * * * *`                           | At the start of every hour.                     |
 | `0 5 * * *`                           | At 5 AM daily.                                  |
 | `0 0 * * *`                           | At midnight daily.                              |
-| `*/5 * * * *`                         | Every 5 minutes.                                |
+| `*/5 * * * *`                         | Every  5 minutes.                                |
+
 
